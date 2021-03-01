@@ -14,4 +14,4 @@
  If the file is detected as a Virus, It is a false-positive. Please add it in your exclusion list or temporarily turn off your antivirus to run it.
  
  # Other
-  If you want me to add something more to the App, please contact me at ![agampreet628@gmail.com](mailto:agampreet628@gmail.com)
+  If you want me to add something more to the App, please contact me at 'agampreet628@gmail.com'
