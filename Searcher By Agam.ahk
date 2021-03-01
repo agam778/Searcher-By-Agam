@@ -15,16 +15,25 @@ HideTrayTip() {
 Gui, Font, s19
 Gui, Add, Text, center w950 , What do you want to search for?
 Gui, Add, Edit, w950 vsearchtext,
+Gui, Font, s16
+Gui, Add, Text, center w950 , Click a website below to search in it.
 Gui, Font, s15
-Gui, Add, Text, center w950 , Click a search engine below to search in it.
-Gui, Add, button, x40 y150 w120 h30, Google
-Gui, Add, button, x+66 y150 w120 h30, Bing
-Gui, Add, button, x+75 y150 w150 h30, DuckDuckGo
-Gui, Add, button, x+56 y150 w180 h30, Merriam-Webster
-Gui, Add, button, x+50 y150 w100 h30, Wikipedia
-Gui, Add, Text, center w850, More Options
-Gui, Add, button, x445 y230 w100 h30, Exit
-Gui, Show, Center w1000 h300, Seacher By Agam
+Gui, Add, Text, center w950 , Search Engines
+Gui, Add, button, x40 y200 w120 h30, Google
+Gui, Add, button, x+66 y200 w120 h30, Bing
+Gui, Add, button, x+77 y200 w150 h30, DuckDuckGo
+Gui, Add, button, x+65 y200 w120 h30, Yahoo
+Gui, Add, button, x+60 y200 w130 h30, Wikipedia
+Gui, Add, Text, center x22 y260 w950 , Videos
+Gui, Add, button, x315 y300 w170 h30, YouTube
+Gui, Add, button, x507 y300 w170 h30, DailyMotion
+Gui, Add, Text, center x22 y360 w950 , Dictionaries
+Gui, Add, button, x210 y405 w180 h30, Merriam-Webster
+Gui, Add, button, x+25 y405 w180 h30, Cambridge
+Gui, Add, button, x+25 y405 w180 h30, Oxford
+Gui, Add, Text, center x69 y490 w850, More Options
+Gui, Add, button, x445 y530 w100 h30, Exit
+Gui, Show, Center w1000 h600, Seacher By Agam
 return
 
 
@@ -51,6 +60,31 @@ ExitApp
 buttonWikipedia:
 GUI, Submit
 Run, https://en.wikipedia.org/w/index.php?search=%searchtext%
+ExitApp
+
+buttonYahoo:
+GUI, Submit
+Run, https://search.yahoo.com/search?p=%searchtext%
+ExitApp
+
+buttonYouTube:
+GUI, Submit
+Run, https://www.youtube.com/results?search_query=%searchtext%
+ExitApp
+
+buttonDailyMotion:
+GUI, Submit
+Run, https://www.dailymotion.com/search/%searchtext%/videos
+ExitApp
+
+buttonCambridge:
+GUI, Submit
+Run, https://dictionary.cambridge.org/dictionary/english/%searchtext%
+ExitApp
+
+buttonOxford:
+GUI, Submit
+Run, https://www.oxfordlearnersdictionaries.com/definition/english/%searchtext%
 ExitApp
 
 buttonExit:
